@@ -23,60 +23,60 @@
 
   <!-- DIV que armazenará todos os botões -->
   <div id="botoes">
-    <!-- Botão X - -->
+    <!-- Botão 1 - -->
+    <input type="button" value="Atualizar" onclick="window.location.reload()" />
+    <!--Fim Botão 1-->
+    <!-- Botão 2 - -->
+    <input type="button" value="Tamanho Fonte" onclick="mudatamanhofonte()" />
+    <!--Fim Botão 2-->
+    <!-- Botão 3 - -->
+    <input type="button" value="Cor Fonte" onclick="mudacorfonte()" />
+    <!--Fim Botão 3-->
+    <!-- Botão 4 - -->
+    <input type="button" value="Back Div" onclick="backdiv()" />
+    <!--Fim Botão 4-->
+    <!-- Botão 5 - -->
+    <input type="button" value="Italico" onclick="italico()" />
+    <!--Fim Botão 5-->
+    <!-- Botão 6 - -->
+    <input type="button" value="Negrito" onclick="negrito()" />
+    <!--Fim Botão 6-->
+    <!-- Botão 7 - -->
+    <input type="button" value="Incluir borda" ondblclick="border()" />
+    <!--Fim Botão 7-->
+    <!-- Botão 8 - -->
+    <input type="button" value="Excluir borda" onmouseenter="exluirborder()" />
+    <!--Fim Botão 8-->
+    <!-- Botão 9 - -->
+    <input type="button" value="Esconder div" onclick="esconderdiv()" />
+    <!--Fim Botão 9-->
+    <!-- Botão 10 - -->
+    <input type="button" value="Mostar div" onclick="mostrardiv()" />
+    <!--Fim Botão 10-->
+    <!-- Botão 11 - -->
+    <input type="button" value="Nao" onclick="nao()"/>
+    <!--Fim Botão 11-->
+    <!-- Botão 12 - -->
     <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
+    <!--Fim Botão 12-->
+    <!-- Botão 13 - -->
     <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
+    <!--Fim Botão 13-->
+    <!-- Botão 14 - -->
     <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
+    <!--Fim Botão 14-->
+    <!-- Botão 15 - -->
     <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
+    <!--Fim Botão 15-->
+    <!-- Botão 16 - -->
     <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
+    <!--Fim Botão 16-->
+    <!-- Botão 17 - -->
     <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
+    <!--Fim Botão 17-->
+    <!-- Botão 18 - -->
     <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
-    <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
-    <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
-    <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
-    <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
-    <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
-    <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
-    <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
-    <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
-    <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
-    <input type="button" value="X" />
-    <!--Fim Botão X-->
-    <!-- Botão X - -->
-    <input type="button" value="X" />
-    <!--Fim Botão X-->
+    <!--Fim Botão 18-->
 
   </div>
   <!-- FIM da DIV que armazena todos os botões -->
@@ -85,81 +85,101 @@
   <img id="image" src="xuxa.jpg">
 
   <script> // Começa a brincadeira com JS
-    // Botão X - xx
+
+    const manipula = document.getElementById('manipula')
+    const subtitulo = document.getElementsByClassName('chamada')[0]
+
+    // Botão 2 - Tamanho Fonte
+    function mudatamanhofonte() {
+      manipula.style.fontSize = '20pt'
+    }
+    //fim do Botão 2
+
+    // Botão 3 - Cor Fonte
+    function mudacorfonte() {
+      manipula.style.color = '#fff'
+    }
+  	//fim do Botão 3
+
+    // Botão 4 - Muda background da div
+    function backdiv() {
+      manipula.style.backgroundColor = 'black'
+    }
+    //fim do Botão 4
+
+    // Botão 5 - Muda texto para italico
+    function italico() {
+      manipula.style.fontStyle = 'italic'
+    }
+    //fim do Botão 5
+    
+    // Botão 6 - muda para negrito
+    function negrito() {
+      manipula.style.fontWeight = 'bold'
+    }
+    //fim do Botão 6
+
+    // Botão 7 - Incluir border
+    function border() {
+      manipula.style.border = '2px solid black'
+    }
+    
+    //fim do Botão 7
+    
+    // Botão 8 - Excluir border
+    function exluirborder() {
+      manipula.style.border = 'none'
+    }
+    //fim do Botão 8
+    
+    // Botão 9 - Esconder div
+    function esconderdiv() {
+      manipula.style.display = 'none'
+    }
+    //fim do Botão 9
+    
+    // Botão 10 - Reaparecer div
+    function mostrardiv() {
+      manipula.style.display = 'block'
+    }
+    //fim do Botão 10
+
+    // Botão 11 - nao
+    function nao() {
+      subtitulo.innerHTML = 'Neste Botão NÃO'
+    }
+    //fim do Botão 11
+
+    // Botão 12 - xx
     function x() {
 
     }
-    //fim do Botão X
-    // Botão X - xx
-    function x() {
+    //fim do Botão 12
 
-}
-//fim do Botão X
-    // Botão X - xx
-    function x() {
-
-}
-//fim do Botão X
-    // Botão X - xx
-    function x() {
-
-}
-//fim do Botão X
-    // Botão X - xx
+    // Botão 13 - xx
     function x() {
 
     }
-    //fim do Botão X
-    // Botão X - xx
+    //fim do Botão 13
+
+    // Botão 14 - xx
     function x() {
 
     }
-    //fim do Botão X
-    // Botão X - xx
+    //fim do Botão 14
+
+    // Botão 15 - xx
     function x() {
 
     }
-    //fim do Botão X
-    // Botão X - xx
+    //fim do Botão 15
+
+    // Botão 16 - xx
     function x() {
 
     }
-    //fim do Botão X
-    // Botão X - xx
-    function x() {
+    //fim do Botão 16
 
-    }
-    //fim do Botão X
-    // Botão X - xx
-    function x() {
-
-    }
-    //fim do Botão X
-    // Botão X - xx
-    function x() {
-
-    }
-    //fim do Botão X
-    // Botão X - xx
-    function x() {
-
-    }
-    //fim do Botão X
-    // Botão X - xx
-    function x() {
-
-    }
-    //fim do Botão X
-    // Botão X - xx
-    function x() {
-
-    }
-    //fim do Botão X
-    // Botão X - xx
-    function x() {
-
-    }
-//fim do Botão X
   </script> <!-- Termina a brincadeira com JS -->
 
   <br>
