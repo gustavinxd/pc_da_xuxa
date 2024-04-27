@@ -51,31 +51,31 @@
     <input type="button" value="Esconder div" onclick="esconderdiv()" />
     <!--Fim Botão 9-->
     <!-- Botão 10 - -->
-    <input type="button" value="Mostar div" onclick="mostrardiv()" />
+    <input type="button" value="Mostrar div" onclick="mostrardiv()" />
     <!--Fim Botão 10-->
     <!-- Botão 11 - -->
     <input type="button" value="Nao" onclick="nao()"/>
     <!--Fim Botão 11-->
     <!-- Botão 12 - -->
-    <input type="button" value="X" />
+    <input type="button" value="back paragrafo" onclick="backgroundp()" />
     <!--Fim Botão 12-->
     <!-- Botão 13 - -->
-    <input type="button" value="X" />
+    <input type="button" value="Cor Botao"  onclick="mudacorbotao()"/>
     <!--Fim Botão 13-->
     <!-- Botão 14 - -->
-    <input type="button" value="X" />
+    <input type="button" value="Cor Botoes" onclick="mudarcorbotoes()"/>
     <!--Fim Botão 14-->
     <!-- Botão 15 - -->
-    <input type="button" value="X" />
+    <input type="button" value="Conta" onclick="contabotao()"/>
     <!--Fim Botão 15-->
     <!-- Botão 16 - -->
-    <input type="button" value="X" />
+    <input type="button" value="Censura" onclick="censura()" />
     <!--Fim Botão 16-->
     <!-- Botão 17 - -->
-    <input type="button" value="X" />
+    <input type="button" value="Black fundo" onclick="fundo()"/>
     <!--Fim Botão 17-->
     <!-- Botão 18 - -->
-    <input type="button" value="X" />
+    <input type="button" value="Se formar no senai" onclick="imagem()"/>
     <!--Fim Botão 18-->
 
   </div>
@@ -88,6 +88,9 @@
 
     const manipula = document.getElementById('manipula')
     const subtitulo = document.getElementsByClassName('chamada')[0]
+
+    const divbotoes = document.getElementById("botoes")
+    const botoes = divbotoes.getElementsByTagName("input")
 
     // Botão 2 - Tamanho Fonte
     function mudatamanhofonte() {
@@ -150,35 +153,52 @@
     }
     //fim do Botão 11
 
-    // Botão 12 - xx
-    function x() {
-
+    // Botão 12 - muda background do paragrafo
+    function backgroundp() {
+      manipula.getElementsByClassName('paragrafo')[0].style.backgroundColor = 'red'
     }
     //fim do Botão 12
 
-    // Botão 13 - xx
-    function x() {
-
+    // Botão 13 - Muda cor do botao
+    function mudacorbotao() {
+      document.getElementsByTagName('input')[6].style.backgroundColor = 'red'
+      document.getElementsByTagName('input')[12].style.backgroundColor = 'red'
     }
     //fim do Botão 13
 
-    // Botão 14 - xx
-    function x() {
+    // Botão 14 - Muda a cor de todos os botoes
+    function mudarcorbotoes() {
+      for(let i = 0; i < botoes.length; i++) {
+        botoes[i].style.backgroundColor = "red"
+      }
 
     }
     //fim do Botão 14
 
-    // Botão 15 - xx
-    function x() {
-
+    // Botão 15 - Conta a quantidade de botoes
+    function contabotao() {
+      manipula.innerHTML = botoes.length
     }
     //fim do Botão 15
 
-    // Botão 16 - xx
-    function x() {
-
+    // Botão 16 - censura
+    function censura() {
+      document.querySelector('p.paragrafo').innerHTML = '**************'
     }
     //fim do Botão 16
+
+    // Botão 17 - Trocar o fundo 
+    function fundo() {
+      document.querySelector('body').style.backgroundColor = 'black'
+    }
+    //fim do Botão 17
+
+    // Botão 18 - censura
+    function imagem() {
+      var img = document.querySelector('#image')
+      img.setAttribute('src', 'alien.jpg')
+    }
+    //fim do Botão 18
 
   </script> <!-- Termina a brincadeira com JS -->
 
